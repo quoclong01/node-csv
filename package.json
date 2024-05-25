@@ -6,13 +6,17 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js --watch -max-old-space-size=2048",
-    "start": "node src/index.js -max-old-space-size=2048"
+    "start": "node src/index.js -max-old-space-size=2048",
+    "migrate:up": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "migrate:generate": "npx sequelize-cli migration:generate --name"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
     "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "fast-csv": "^5.0.1",
@@ -23,6 +27,7 @@
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
     "autocannon": "^7.15.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2"
   }
 }
