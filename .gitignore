@@ -4,3 +4,4 @@ yarn.lock
 /bench/sample-csv
 data/
 .idea/**
+.env
