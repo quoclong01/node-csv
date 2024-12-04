@@ -25,6 +25,7 @@ app.post('/api/products/import', uploadMiddleware.single('file'), importProducts
 app.get('/api/products/export', exportProducts);
 app.get('/api/products/:id', findOneProduct);
 
+// Connect
 app.listen(PORT, (error) => {
   if (!error) {
     console.log('App is listening on port ' + PORT);
